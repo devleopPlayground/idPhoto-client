@@ -6,13 +6,22 @@ import usePhotoShoot from './hooks/usePhotoShoot';
 import st from './photoShoot.module.scss';
 
 const PhotoShoot = () => {
-  const { isWebcamOn, changeWebcamState, webcamRef, shootPhoto, resetPhoto, imageUrl } = usePhotoShoot();
+  const {
+    isCameraLoading,
+    isWebcamOn,
+    changeWebcamState,
+    webcamRef,
+    shootPhoto,
+    resetPhoto,
+    onUserMedia,
+    imageUrl,
+  } = usePhotoShoot();
 
   return (
     <>
       {isWebcamOn ? (
         <div className={st.container}>
-          <WebCam webcamRef={webcamRef} />
+          <WebCam webcamRef={webcamRef} isCameraLoading={isCameraLoading} onUserMedia={onUserMedia} />
           <WebCameraButtons
             changeWebcamState={changeWebcamState}
             shootPhoto={shootPhoto}

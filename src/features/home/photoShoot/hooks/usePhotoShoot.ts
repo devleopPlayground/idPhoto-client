@@ -2,6 +2,7 @@ import { useCallback, useRef, useState } from 'react';
 import Webcam from 'react-webcam';
 
 const usePhotoShoot = () => {
+  const [isCameraLoading, setIsCameraLoading] = useState(true);
   const [isWebcamOn, setIsWebcamOn] = useState(false);
   const [imageUrl, setImageUrl] = useState<string | null>(null);
 
@@ -18,13 +19,19 @@ const usePhotoShoot = () => {
     setIsWebcamOn(!isWebcamOn);
   };
 
+  const onUserMedia = () => {
+    setIsCameraLoading(false);
+  };
+
   return {
+    isCameraLoading,
     isWebcamOn,
     webcamRef,
     imageUrl,
     shootPhoto,
     resetPhoto,
     changeWebcamState,
+    onUserMedia,
   };
 };
 

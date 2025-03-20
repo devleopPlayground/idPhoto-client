@@ -1,3 +1,4 @@
+import Button from '@/components/common/button';
 import st from './webCameraButtons.module.scss';
 
 type webCameraButtonsProps = {
@@ -9,15 +10,13 @@ type webCameraButtonsProps = {
 const WebCameraButtons = ({ changeWebcamState, shootPhoto, resetPhoto }: webCameraButtonsProps) => {
   return (
     <div className={st.container}>
-      <button className={st.shootPhoto} onClick={shootPhoto}>
+      <Button variant="pink" onClick={shootPhoto}>
         사진 촬영하기
-      </button>
-      <button className={st.resetPhoto} onClick={resetPhoto}>
-        사진 지우기
-      </button>
-      <button className={st.resetPhoto} onClick={changeWebcamState}>
+      </Button>
+      <Button onClick={resetPhoto}>사진 지우기</Button>
+      <Button variant="lightPink" onClick={changeWebcamState}>
         카메라 끄기
-      </button>
+      </Button>
     </div>
   );
 };

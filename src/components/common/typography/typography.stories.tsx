@@ -26,7 +26,7 @@ export const TypographyStories: Story = {
         긴글 긴글 긴글 긴글 긴글 긴글 긴글 긴글 긴글 긴글 긴글 긴글 긴글 긴글 긴글 긴글 긴글 긴글 긴글 긴글
         긴글 긴글 긴글 긴글
       </Typography>
-
+      <br />
       <Typography variant={variant}>{children}</Typography>
     </div>
   ),

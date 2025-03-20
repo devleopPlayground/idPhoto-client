@@ -1,0 +1,18 @@
+.container {
+  background-color: rgb(196, 196, 196);
+}
+
+.webcamSkeletonUi {
+  position: absolute;
+  width: 510px;
+  height: 383px;
+  margin-bottom: 383px;
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+  gap: 10px;
+}

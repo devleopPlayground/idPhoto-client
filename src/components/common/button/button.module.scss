@@ -1,0 +1,51 @@
+.container {
+  cursor: pointer;
+  border: 1px solid black;
+  transition: 0.1s ease-in-out;
+}
+
+.container:active {
+  transform: translateX(0.7px) translateY(0.7px);
+}
+
+.sm {
+  width: 250px;
+  padding: 6px 5px;
+  border-radius: 4px;
+}
+
+.md {
+  width: 400px;
+  padding: 9px 7px;
+  border-radius: 5px;
+}
+
+.lg {
+  width: 100%;
+  padding: 10px 8px;
+  border-radius: 6px;
+}
+
+.pink {
+  background-color: pink;
+}
+
+.pink:hover {
+  background-color: rgb(255, 164, 179);
+}
+
+.lightPink {
+  background-color: rgb(255, 226, 231);
+}
+
+.lightPink:hover {
+  background-color: rgb(255, 198, 208);
+}
+
+.white {
+  background-color: white;
+}
+
+.white:hover {
+  background-color: rgb(234, 234, 234);
+}
