@@ -1,0 +1,14 @@
+.container {
+  max-width: 510px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cameraBox {
+  height: 383px;
+  border-radius: 8px;
+  background-color: rgb(196, 196, 196);
+}

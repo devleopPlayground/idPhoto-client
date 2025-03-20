@@ -11,7 +11,7 @@ const LayoutProvider = ({ children }: LayoutContainerProps) => {
     <LayoutAnimatePresence>
       <LayoutContainer>
         <LayoutHeader />
-        {children}
+        <div style={{ paddingTop: '82px' }}>{children}</div>
       </LayoutContainer>
     </LayoutAnimatePresence>
   );

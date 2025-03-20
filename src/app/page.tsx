@@ -1,4 +1,4 @@
-import PhotoShoot from '@/features/home/photoShoot';
+import PhotoShoot from '@/features/photoShoot';
 
 const HomePage = () => {
   return <PhotoShoot />;

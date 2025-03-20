@@ -1,5 +1,7 @@
 'use client';
 
+import CapturePhoto from './components/capturePhoto';
+import TurnOnWebcam from './components/turnOnWebcam';
 import WebCam from './components/webCamera';
 import WebCameraButtons from './components/webCameraButtons';
 import usePhotoShoot from './hooks/usePhotoShoot';
@@ -29,13 +31,9 @@ const PhotoShoot = () => {
           />
         </div>
       ) : (
-        <div onClick={changeWebcamState}>tkwlsdmf </div>
+        <TurnOnWebcam changeWebcamState={changeWebcamState} />
       )}
-      {imageUrl && (
-        <div>
-          <img src={imageUrl} alt="Screenshot" />
-        </div>
-      )}
+      {imageUrl && <CapturePhoto imageUrl={imageUrl} />}
     </>
   );
 };

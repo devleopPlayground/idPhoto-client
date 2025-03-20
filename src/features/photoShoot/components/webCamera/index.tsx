@@ -1,6 +1,6 @@
 import { MutableRefObject, useState } from 'react';
 import Webcam from 'react-webcam';
-import { videoConstraints } from '@/features/home/photoShoot/utils';
+import { videoConstraints } from '@/features/photoShoot/utils';
 import WebcamSkeletonUi from '@/components/common/skeleton/webcamSkeletonUi';
 
 type WebCameraProps = {
@@ -16,7 +16,7 @@ const WebCamera = ({ webcamRef, isCameraLoading, onUserMedia }: WebCameraProps) 
     <>
       {isCameraLoading && <WebcamSkeletonUi 권한Error={권한Error} />}
       <Webcam
-        style={{ borderRadius: '8px' }}
+        style={{ position: 'relative', borderRadius: '8px' }}
         ref={webcamRef}
         screenshotFormat="image/jpeg"
         videoConstraints={videoConstraints}
