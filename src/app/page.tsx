@@ -1,5 +1,7 @@
+import PhotoShoot from '@/features/home/photoShoot';
+
 const HomePage = () => {
-  return <div></div>;
+  return <PhotoShoot />;
 };
 
 export default HomePage;

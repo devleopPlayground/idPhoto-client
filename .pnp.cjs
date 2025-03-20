@@ -47,6 +47,7 @@ const RAW_RUNTIME_STATE =
           ["next", "virtual:32b6e5fa881f8b4bb91f942292cc240361530c07a488a9f7362616b1471f26dc0841ab12899941e1d099a2d5230f05097d767cee778ffe8c43db161f55ad1cd1#npm:15.2.3"],\
           ["react", "npm:18.0.0"],\
           ["react-dom", "virtual:32b6e5fa881f8b4bb91f942292cc240361530c07a488a9f7362616b1471f26dc0841ab12899941e1d099a2d5230f05097d767cee778ffe8c43db161f55ad1cd1#npm:18.0.0"],\
+          ["react-webcam", "virtual:32b6e5fa881f8b4bb91f942292cc240361530c07a488a9f7362616b1471f26dc0841ab12899941e1d099a2d5230f05097d767cee778ffe8c43db161f55ad1cd1#npm:7.2.0"],\
           ["sass", "npm:1.86.0"],\
           ["storybook", "npm:7.6.20"],\
           ["typescript", "patch:typescript@npm%3A5.8.2#optional!builtin<compat/typescript>::version=5.8.2&hash=5786d5"],\
@@ -12356,6 +12357,7 @@ const RAW_RUNTIME_STATE =
           ["next", "virtual:32b6e5fa881f8b4bb91f942292cc240361530c07a488a9f7362616b1471f26dc0841ab12899941e1d099a2d5230f05097d767cee778ffe8c43db161f55ad1cd1#npm:15.2.3"],\
           ["react", "npm:18.0.0"],\
           ["react-dom", "virtual:32b6e5fa881f8b4bb91f942292cc240361530c07a488a9f7362616b1471f26dc0841ab12899941e1d099a2d5230f05097d767cee778ffe8c43db161f55ad1cd1#npm:18.0.0"],\
+          ["react-webcam", "virtual:32b6e5fa881f8b4bb91f942292cc240361530c07a488a9f7362616b1471f26dc0841ab12899941e1d099a2d5230f05097d767cee778ffe8c43db161f55ad1cd1#npm:7.2.0"],\
           ["sass", "npm:1.86.0"],\
           ["storybook", "npm:7.6.20"],\
           ["typescript", "patch:typescript@npm%3A5.8.2#optional!builtin<compat/typescript>::version=5.8.2&hash=5786d5"],\
@@ -15811,6 +15813,32 @@ const RAW_RUNTIME_STATE =
         ],\
         "packagePeers": [\
           "@types/react",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["react-webcam", [\
+      ["npm:7.2.0", {\
+        "packageLocation": "./.yarn/cache/react-webcam-npm-7.2.0-4404f3658d-10c0.zip/node_modules/react-webcam/",\
+        "packageDependencies": [\
+          ["react-webcam", "npm:7.2.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:32b6e5fa881f8b4bb91f942292cc240361530c07a488a9f7362616b1471f26dc0841ab12899941e1d099a2d5230f05097d767cee778ffe8c43db161f55ad1cd1#npm:7.2.0", {\
+        "packageLocation": "./.yarn/__virtual__/react-webcam-virtual-1fd5d28060/0/cache/react-webcam-npm-7.2.0-4404f3658d-10c0.zip/node_modules/react-webcam/",\
+        "packageDependencies": [\
+          ["react-webcam", "virtual:32b6e5fa881f8b4bb91f942292cc240361530c07a488a9f7362616b1471f26dc0841ab12899941e1d099a2d5230f05097d767cee778ffe8c43db161f55ad1cd1#npm:7.2.0"],\
+          ["@types/react", "npm:18.3.18"],\
+          ["@types/react-dom", "virtual:32b6e5fa881f8b4bb91f942292cc240361530c07a488a9f7362616b1471f26dc0841ab12899941e1d099a2d5230f05097d767cee778ffe8c43db161f55ad1cd1#npm:18.3.5"],\
+          ["react", "npm:18.0.0"],\
+          ["react-dom", "virtual:32b6e5fa881f8b4bb91f942292cc240361530c07a488a9f7362616b1471f26dc0841ab12899941e1d099a2d5230f05097d767cee778ffe8c43db161f55ad1cd1#npm:18.0.0"]\
+        ],\
+        "packagePeers": [\
+          "@types/react-dom",\
+          "@types/react",\
+          "react-dom",\
           "react"\
         ],\
         "linkType": "HARD"\
