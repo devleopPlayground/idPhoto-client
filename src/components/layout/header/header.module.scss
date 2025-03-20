@@ -1,0 +1,21 @@
+.container {
+  width: calc(100% - 30px);
+  display: flex;
+  justify-content: flex-end;
+  padding: 12px;
+
+  .navText {
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 18px;
+    transition: 0.08s ease-in-out;
+  }
+
+  .navText:hover {
+    background-color: rgb(221, 221, 221);
+  }
+
+  .navText:active {
+    transform: translateX(-0.7px) translateY(-0.7px);
+  }
+}
