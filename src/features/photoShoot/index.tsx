@@ -2,6 +2,7 @@
 
 import CapturePhoto from './components/capturePhoto';
 import TurnOnWebcam from './components/turnOnWebcam';
+import UploadImage from './components/uploadImage';
 import WebCam from './components/webCamera';
 import WebCameraButtons from './components/webCameraButtons';
 import usePhotoShoot from './hooks/usePhotoShoot';
@@ -25,6 +26,7 @@ const PhotoShoot = () => {
         <div className={st.container}>
           <WebCam webcamRef={webcamRef} isCameraLoading={isCameraLoading} onUserMedia={onUserMedia} />
           <WebCameraButtons
+            isCameraLoading={isCameraLoading}
             changeWebcamState={changeWebcamState}
             shootPhoto={shootPhoto}
             resetPhoto={resetPhoto}
@@ -33,6 +35,7 @@ const PhotoShoot = () => {
       ) : (
         <TurnOnWebcam changeWebcamState={changeWebcamState} />
       )}
+      <UploadImage />
       {imageUrl && <CapturePhoto imageUrl={imageUrl} />}
     </>
   );

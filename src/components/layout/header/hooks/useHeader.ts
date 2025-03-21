@@ -4,7 +4,7 @@ const useHeader = () => {
   const [isSticky, setIsSticky] = useState(false);
 
   const handleScroll = () => {
-    if (window.scrollY >= 61.25) {
+    if (window.scrollY >= 30) {
       setIsSticky(true);
     } else {
       setIsSticky(false);

@@ -1,4 +1,4 @@
-import { useCallback, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import Webcam from 'react-webcam';
 
 const usePhotoShoot = () => {
@@ -20,8 +20,14 @@ const usePhotoShoot = () => {
   };
 
   const onUserMedia = () => {
-    setIsCameraLoading(false);
+    setTimeout(() => setIsCameraLoading(false), 200);
   };
+
+  useEffect(() => {
+    if (isWebcamOn) {
+      setIsCameraLoading(true);
+    }
+  }, [isWebcamOn]);
 
   return {
     isCameraLoading,

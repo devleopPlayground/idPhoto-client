@@ -1,4 +1,4 @@
-import { ForwardedRef, forwardRef, HTMLAttributes } from 'react';
+import { ButtonHTMLAttributes, ForwardedRef, forwardRef } from 'react';
 import Typography from '../typography';
 import st from './button.module.scss';
 import clsx from 'clsx';
@@ -9,7 +9,7 @@ type ButtonProps = {
   size?: 'sm' | 'md' | 'lg';
   fontVariant?: 'sm' | 'md' | 'lg';
   className?: string;
-} & HTMLAttributes<HTMLButtonElement>;
+} & ButtonHTMLAttributes<HTMLButtonElement>;
 
 const Button = forwardRef(
   (

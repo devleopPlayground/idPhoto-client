@@ -21,7 +21,7 @@ const WebCamera = ({ webcamRef, isCameraLoading, onUserMedia }: WebCameraProps) 
         screenshotFormat="image/jpeg"
         videoConstraints={videoConstraints}
         onUserMedia={onUserMedia}
-        onUserMediaError={(err) => set권한Error('웹캠 권한이 필요합니다.')}
+        onUserMediaError={() => set권한Error('웹캠 권한이 필요합니다.')}
       />
     </>
   );

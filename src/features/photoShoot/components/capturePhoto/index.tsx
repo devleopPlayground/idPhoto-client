@@ -1,4 +1,5 @@
 import Button from '@/components/common/button';
+import st from './capturePhoto.module.scss';
 
 type CapturePhotoProps = {
   imageUrl: string;
@@ -6,8 +7,8 @@ type CapturePhotoProps = {
 
 const CapturePhoto = ({ imageUrl }: CapturePhotoProps) => {
   return (
-    <div>
-      <img src={imageUrl} />
+    <div className={st.container}>
+      <img className={st.captureImage} src={imageUrl} />
       <Button>다음</Button>
     </div>
   );

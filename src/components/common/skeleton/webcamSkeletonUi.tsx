@@ -12,7 +12,7 @@ const WebcamSkeletonUi = ({ 권한Error }: WebcamSkeletonUiProps) => {
   };
 
   return (
-    <div className={clsx(st.container, st.webcamSkeletonUi)}>
+    <div className={st.webcamSkeletonUiContainer}>
       {권한Error && (
         <>
           <Typography variant="lg">{권한Error}</Typography>

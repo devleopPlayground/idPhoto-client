@@ -1,13 +1,9 @@
-.container {
+.webcamSkeletonUiContainer {
   background-color: rgb(196, 196, 196);
-}
-
-.webcamSkeletonUi {
-  position: absolute;
   width: 510px;
 
+  position: absolute;
   height: 383px;
-
   border-radius: 8px;
 
   display: flex;
@@ -16,4 +12,21 @@
 
   flex-direction: column;
   gap: 10px;
+}
+
+.WebcamSkeletonButtonsUiContainer {
+  display: flex;
+  flex-direction: column;
+
+  .webcamSkeletonUi {
+    background-color: rgb(196, 196, 196);
+    width: 510px;
+    height: 43.25px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+  }
+
+  .webcamSkeletonUi:last-child {
+    margin-bottom: 0;
+  }
 }

@@ -1,0 +1,15 @@
+.container {
+  width: 100%;
+  max-width: 510px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  margin: 0 auto;
+  padding: 20px 0;
+
+  .captureImage {
+    border-radius: 8px;
+  }
+}
