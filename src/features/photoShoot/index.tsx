@@ -1,5 +1,6 @@
 'use client';
 
+import Button from '@/components/common/button';
 import CapturePhoto from './components/capturePhoto';
 import TurnOnWebcam from './components/turnOnWebcam';
 import UploadImage from './components/uploadImage';
@@ -16,6 +17,7 @@ const PhotoShoot = () => {
     webcamRef,
     shootPhoto,
     resetPhoto,
+    uploadFile,
     onUserMedia,
     imageUrl,
   } = usePhotoShoot();
@@ -35,8 +37,13 @@ const PhotoShoot = () => {
       ) : (
         <TurnOnWebcam changeWebcamState={changeWebcamState} />
       )}
-      <UploadImage />
-      {imageUrl && <CapturePhoto imageUrl={imageUrl} />}
+      <UploadImage uploadFile={uploadFile} />
+      {imageUrl && (
+        <>
+          <CapturePhoto imageUrl={imageUrl} />
+          <Button>다음</Button>
+        </>
+      )}
     </>
   );
 };

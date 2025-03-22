@@ -9,7 +9,6 @@ const CapturePhoto = ({ imageUrl }: CapturePhotoProps) => {
   return (
     <div className={st.container}>
       <img className={st.captureImage} src={imageUrl} />
-      <Button>다음</Button>
     </div>
   );
 };
