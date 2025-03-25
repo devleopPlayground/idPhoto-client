@@ -1,4 +1,3 @@
-import Button from '@/components/common/button';
 import st from './capturePhoto.module.scss';
 
 type CapturePhotoProps = {

@@ -5,11 +5,17 @@ import LayoutProvider from '@/components/layout';
 
 export const metadata = generateMetadata();
 
-const RootLayout = ({ children }: { children: React.ReactNode }) => {
+type RootLayoutProps = {
+  children: React.ReactNode;
+  modal?: React.ReactNode;
+};
+
+const RootLayout = ({ children, modal }: RootLayoutProps) => {
   return (
     <html lang="kr">
       <body className={`${pretendard.variable}`}>
         <LayoutProvider>{children}</LayoutProvider>
+        {modal}
       </body>
     </html>
   );

@@ -15,7 +15,6 @@ const WebCameraButtons = ({
   shootPhoto,
   resetPhoto,
 }: webCameraButtonsProps) => {
-  console.log('isCameraLoading', isCameraLoading);
   return (
     <>
       {isCameraLoading ? (

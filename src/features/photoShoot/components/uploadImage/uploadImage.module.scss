@@ -27,4 +27,9 @@
   .input {
     display: none;
   }
+
+  .imageInput:active {
+    background-color: rgb(248, 248, 248);
+    transform: translateX(0.7px) translateY(0.7px);
+  }
 }
