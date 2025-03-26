@@ -1,0 +1,24 @@
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+
+  .label {
+    display: inline;
+    align-self: flex-start;
+  }
+
+  .input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border-radius: 6px;
+    background-color: white;
+    border: 1.8px solid gray;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .input:focus {
+    outline-color: gray;
+  }
+}

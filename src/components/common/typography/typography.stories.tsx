@@ -7,7 +7,7 @@ const meta = {
   tags: ['autodocs'],
   argTypes: {
     variant: {
-      control: { type: 'select', options: ['sm', 'md', 'lg'] },
+      control: { type: 'select', options: ['tn', 'sm', 'md', 'lg'] },
     },
   },
 } satisfies Meta<typeof Typography>;

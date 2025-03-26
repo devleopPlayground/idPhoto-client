@@ -4,7 +4,7 @@ import { HTMLAttributes } from 'react';
 
 type TypographyProps = {
   children: React.ReactNode;
-  variant?: 'sm' | 'md' | 'lg';
+  variant?: 'tn' | 'sm' | 'md' | 'lg';
   className?: string;
 } & HTMLAttributes<HTMLSpanElement>;
 

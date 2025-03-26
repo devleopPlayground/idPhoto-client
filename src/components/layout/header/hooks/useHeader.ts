@@ -1,3 +1,4 @@
+import useModalStore from '@/store/useModalStore';
 import { useCallback, useEffect, useState } from 'react';
 
 const useHeader = () => {
@@ -11,6 +12,8 @@ const useHeader = () => {
     }
   };
 
+  const openModal = useModalStore((state) => state.openModal);
+
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
 
@@ -19,7 +22,7 @@ const useHeader = () => {
     };
   }, []);
 
-  return { isSticky };
+  return { isSticky, openModal };
 };
 
 export default useHeader;

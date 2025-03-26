@@ -11,10 +11,10 @@ const useModalStore = create<ModalOpenState>()(
   persist(
     (set) => ({
       isOpen: false,
-      openModal: () => set((state) => ({ isOpen: true })),
-      closeModal: () => set((state) => ({ isOpen: false })),
+      openModal: () => set({ isOpen: true }),
+      closeModal: () => set({ isOpen: false }),
     }),
-    { name: 'modal-store' },
+    { name: 'modal-store', skipHydration: true },
   ),
 );
 
