@@ -1,5 +1,7 @@
-import useModalStore from '@/store/useModalStore';
-import { useCallback, useEffect, useState } from 'react';
+import { ACCESS_TOKEN } from '@/constants/token';
+import useModalStore from '@/stores/useModalStore';
+import { LocalStorage } from '@/utils/localStorage';
+import { useEffect, useState } from 'react';
 
 const useHeader = () => {
   const [isSticky, setIsSticky] = useState(false);
@@ -12,6 +14,8 @@ const useHeader = () => {
     }
   };
 
+  const routeMyCollection = () => {};
+
   const openModal = useModalStore((state) => state.openModal);
 
   useEffect(() => {
@@ -22,7 +26,9 @@ const useHeader = () => {
     };
   }, []);
 
-  return { isSticky, openModal };
+  const hasAccessToken = LocalStorage.getItem(ACCESS_TOKEN);
+
+  return { isSticky, hasAccessToken, openModal, routeMyCollection };
 };
 
 export default useHeader;

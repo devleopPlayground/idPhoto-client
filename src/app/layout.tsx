@@ -2,6 +2,7 @@ import './globals.css';
 import { pretendard } from './fonts';
 import { generateMetadata } from '@/utils/generateMetadata';
 import LayoutProvider from '@/components/layout';
+import TanstackReactQueryProvider from '@/providers/tanstackReactQueryProvider';
 
 export const metadata = generateMetadata();
 
@@ -14,8 +15,12 @@ const RootLayout = ({ children, modal }: RootLayoutProps) => {
   return (
     <html lang="kr">
       <body className={`${pretendard.variable}`}>
-        <LayoutProvider>{children}</LayoutProvider>
-        {modal}
+        <TanstackReactQueryProvider>
+          <LayoutProvider>
+            {children}
+            {modal}
+          </LayoutProvider>
+        </TanstackReactQueryProvider>
       </body>
     </html>
   );

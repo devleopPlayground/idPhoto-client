@@ -1,18 +1,22 @@
 import { useCallback } from 'react';
+import useLoginMutation from './useLoginMutation';
 
 const useLogin = () => {
-  const onSubmitLogin = useCallback((e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const { mutate } = useLoginMutation();
 
-    const formData = new FormData(e.currentTarget);
+  const onSubmitLogin = useCallback(
+    (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
 
-    const email = formData.get('email');
-    const password = formData.get('password');
+      const formData = new FormData(e.currentTarget);
+      const email = formData.get('email') as string;
+      const password = formData.get('password') as string;
 
-    console.log(email, password);
-
-    e.currentTarget.reset();
-  }, []);
+      mutate({ email, password });
+      e.currentTarget.reset();
+    },
+    [mutate],
+  );
 
   return { onSubmitLogin };
 };

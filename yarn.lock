@@ -4460,6 +4460,43 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tanstack/query-core@npm:5.69.0":
+  version: 5.69.0
+  resolution: "@tanstack/query-core@npm:5.69.0"
+  checksum: 10c0/8ad87046d1a8c18773de10e74d7fef2093cdbe9734e76460945048c00a219ae3d2421eab2b4d54340f3f491813f99ceef7d2849827d95490c8b67de1b87934ae
+  languageName: node
+  linkType: hard
+
+"@tanstack/query-devtools@npm:5.67.2":
+  version: 5.67.2
+  resolution: "@tanstack/query-devtools@npm:5.67.2"
+  checksum: 10c0/85172bb7cbca204e62507ffb72add4ff8f204b034ea0c6bb82cc44a00756ab196bd8a688b5e857911274aa5e7c467cdda6a393ebce6ba36ce8d471d5b52060fb
+  languageName: node
+  linkType: hard
+
+"@tanstack/react-query-devtools@npm:^5.69.0":
+  version: 5.69.0
+  resolution: "@tanstack/react-query-devtools@npm:5.69.0"
+  dependencies:
+    "@tanstack/query-devtools": "npm:5.67.2"
+  peerDependencies:
+    "@tanstack/react-query": ^5.69.0
+    react: ^18 || ^19
+  checksum: 10c0/e74937f68f205227d3a1bc616daeb4908de6c09426851b64c96b48a2f7468abbfe8a9509eac5c808836f63b0ae5faaba4229e7d1fed5e00cf7dc913da05f705f
+  languageName: node
+  linkType: hard
+
+"@tanstack/react-query@npm:^5.69.0":
+  version: 5.69.0
+  resolution: "@tanstack/react-query@npm:5.69.0"
+  dependencies:
+    "@tanstack/query-core": "npm:5.69.0"
+  peerDependencies:
+    react: ^18 || ^19
+  checksum: 10c0/3481218d0dd1623af8148037011415ca6f57f2f918e859f6856b7d6cec191ca79029f6fd9e5b1139b1ec252198bda645ce8c1b44ac8dd28adf3c5f978a4126ec
+  languageName: node
+  linkType: hard
+
 "@testing-library/dom@npm:^9.0.0":
   version: 9.3.4
   resolution: "@testing-library/dom@npm:9.3.4"
@@ -5891,6 +5928,17 @@ __metadata:
   version: 4.10.3
   resolution: "axe-core@npm:4.10.3"
   checksum: 10c0/1b1c24f435b2ffe89d76eca0001cbfff42dbf012ad9bd37398b70b11f0d614281a38a28bc3069e8972e3c90ec929a8937994bd24b0ebcbaab87b8d1e241ab0c7
+  languageName: node
+  linkType: hard
+
+"axios@npm:^1.8.4":
+  version: 1.8.4
+  resolution: "axios@npm:1.8.4"
+  dependencies:
+    follow-redirects: "npm:^1.15.6"
+    form-data: "npm:^4.0.0"
+    proxy-from-env: "npm:^1.1.0"
+  checksum: 10c0/450993c2ba975ffccaf0d480b68839a3b2435a5469a71fa2fb0b8a55cdb2c2ae47e609360b9c1e2b2534b73dfd69e2733a1cf9f8215bee0bcd729b72f801b0ce
   languageName: node
   linkType: hard
 
@@ -8654,6 +8702,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"follow-redirects@npm:^1.15.6":
+  version: 1.15.9
+  resolution: "follow-redirects@npm:1.15.9"
+  peerDependenciesMeta:
+    debug:
+      optional: true
+  checksum: 10c0/5829165bd112c3c0e82be6c15b1a58fa9dcfaede3b3c54697a82fe4a62dd5ae5e8222956b448d2f98e331525f05d00404aba7d696de9e761ef6e42fdc780244f
+  languageName: node
+  linkType: hard
+
 "for-each@npm:^0.3.3, for-each@npm:^0.3.5":
   version: 0.3.5
   resolution: "for-each@npm:0.3.5"
@@ -9411,9 +9469,12 @@ __metadata:
     "@storybook/nextjs": "npm:7.5.3"
     "@storybook/react": "npm:7.5.3"
     "@storybook/testing-library": "npm:0.2.2"
+    "@tanstack/react-query": "npm:^5.69.0"
+    "@tanstack/react-query-devtools": "npm:^5.69.0"
     "@types/node": "npm:^20"
     "@types/react": "npm:18"
     "@types/react-dom": "npm:18"
+    axios: "npm:^1.8.4"
     clsx: "npm:^2.1.1"
     eslint: "npm:^9"
     eslint-config-next: "npm:15.2.3"
@@ -12042,7 +12103,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"proxy-from-env@npm:^1.0.0":
+"proxy-from-env@npm:^1.0.0, proxy-from-env@npm:^1.1.0":
   version: 1.1.0
   resolution: "proxy-from-env@npm:1.1.0"
   checksum: 10c0/fe7dd8b1bdbbbea18d1459107729c3e4a2243ca870d26d34c2c1bcd3e4425b7bcc5112362df2d93cc7fb9746f6142b5e272fd1cc5c86ddf8580175186f6ad42b

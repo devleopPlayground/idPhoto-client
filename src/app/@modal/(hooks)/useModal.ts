@@ -1,10 +1,9 @@
 import { LOGIN, REGISTER } from '@/constants/loginRegister';
-import useModalStore from '@/store/useModalStore';
+import useModalStore from '@/stores/useModalStore';
 import { useState } from 'react';
 
 const useModal = () => {
   const isModalOpen = useModalStore((state) => state.isOpen);
-
   const modalClose = useModalStore((state) => state.closeModal);
 
   const [loginForm, setLoginForm] = useState(LOGIN);

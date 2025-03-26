@@ -6,10 +6,13 @@ import useHeader from './hooks/useHeader';
 import clsx from 'clsx';
 
 const LayoutHeader = () => {
-  const { isSticky, openModal } = useHeader();
+  const { hasAccessToken, isSticky, openModal, routeMyCollection } = useHeader();
 
   return (
-    <div onClick={openModal} className={clsx(st.container, isSticky && st.visible)}>
+    <div
+      onClick={hasAccessToken ? routeMyCollection : openModal}
+      className={clsx(st.container, isSticky && st.visible)}
+    >
       <Typography className={st.navText}>내 증명사진첩</Typography>
     </div>
   );

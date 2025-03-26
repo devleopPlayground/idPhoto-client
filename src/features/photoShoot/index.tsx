@@ -26,9 +26,9 @@ const PhotoShoot = () => {
   const { part, onClickResultButton } = usePart();
 
   return (
-    <>
+    <div>
       {part !== 'RESULT' ? (
-        <>
+        <div>
           {isWebcamOn ? (
             <div className={st.container}>
               <WebCam webcamRef={webcamRef} isCameraLoading={isCameraLoading} onUserMedia={onUserMedia} />
@@ -51,11 +51,11 @@ const PhotoShoot = () => {
               </Button>
             </div>
           )}
-        </>
+        </div>
       ) : (
         <>hi</>
       )}
-    </>
+    </div>
   );
 };
 

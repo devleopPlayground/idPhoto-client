@@ -11,6 +11,9 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.69.0",
+    "@tanstack/react-query-devtools": "^5.69.0",
+    "axios": "^1.8.4",
     "next": "15.2.3",
     "react": "18.0.0",
     "react-dom": "18.0.0",
