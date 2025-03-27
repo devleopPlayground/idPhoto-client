@@ -1,4 +1,3 @@
-import clsx from 'clsx';
 import st from './skeleton.module.scss';
 import Typography from '../typography';
 
