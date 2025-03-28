@@ -1,0 +1,60 @@
+.portalContainer {
+  width: 100%;
+  height: 30dvh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .portalContentWrapper {
+    width: 100%;
+    max-width: 550px;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.contentContainer {
+  max-width: 210px;
+  margin-top: 10px;
+  margin-right: 10px;
+  display: inline-block;
+  padding: 10px;
+  color: rgb(235, 235, 235);
+  word-wrap: break-word;
+  border-radius: 6px;
+  cursor: pointer;
+
+  animation: fadeToast 2.5s ease-in-out;
+
+  &.success {
+    background-color: rgb(14, 154, 14);
+  }
+
+  &.error {
+    background-color: red;
+  }
+}
+
+@keyframes fadeToast {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  20% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  80% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+}

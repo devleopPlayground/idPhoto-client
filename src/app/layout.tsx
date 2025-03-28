@@ -3,6 +3,7 @@ import { pretendard } from './fonts';
 import { generateMetadata } from '@/utils/generateMetadata';
 import LayoutProvider from '@/components/layout';
 import TanstackReactQueryProvider from '@/providers/tanstackReactQueryProvider';
+import ToastPortal from '@/common/toast/toastPortal';
 
 export const metadata = generateMetadata();
 
@@ -21,6 +22,7 @@ const RootLayout = ({ children, modal }: RootLayoutProps) => {
             {modal}
           </LayoutProvider>
         </TanstackReactQueryProvider>
+        <ToastPortal />
       </body>
     </html>
   );

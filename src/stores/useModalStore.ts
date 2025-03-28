@@ -1,13 +1,13 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
-type ModalOpenState = {
+type ModalStoreType = {
   isOpen: boolean;
   openModal: () => void;
   closeModal: () => void;
 };
 
-const useModalStore = create<ModalOpenState>()(
+const useModalStore = create<ModalStoreType>()(
   persist(
     (set) => ({
       isOpen: false,

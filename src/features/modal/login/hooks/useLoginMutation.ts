@@ -15,10 +15,12 @@ type LoginResponseType = {
 };
 
 const useLoginMutation = () => {
+  const { closeModal } = useModalStore();
+
   return useMutation<LoginResponseType, Error, UseLoginMutationType>({
     mutationFn: ({ email, password }) => socialLogin({ email, password }),
     onSuccess: (data) => {
-      useModalStore.getState().closeModal();
+      closeModal();
 
       LocalStorage.setItem(ACCESS_TOKEN, data.accessToken);
       LocalStorage.setItem(REFRESH_TOKEN, data.refreshToken);
