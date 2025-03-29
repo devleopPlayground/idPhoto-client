@@ -1,17 +1,19 @@
 import { useCallback } from 'react';
+import useRegisterMutation from './useRegisterMutation';
 
 const useRegister = () => {
+  const { mutate } = useRegisterMutation();
+
   const onSubmitRegister = useCallback((e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const formData = new FormData(e.currentTarget);
 
-    const email = formData.get('email');
-    const password = formData.get('password');
-    const username = formData.get('username');
+    const email = formData.get('email') as string;
+    const password = formData.get('password') as string;
+    const username = formData.get('username') as string;
 
-    console.log(email, password, username);
-
+    mutate({ email, password, username });
     e.currentTarget.reset();
   }, []);
 

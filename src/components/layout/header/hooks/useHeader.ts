@@ -1,10 +1,10 @@
-import { ACCESS_TOKEN } from '@/constants/token';
+import useAuthStore from '@/stores/useAuthStore';
 import useModalStore from '@/stores/useModalStore';
-import { LocalStorage } from '@/utils/localStorage';
 import { useEffect, useState } from 'react';
 
 const useHeader = () => {
   const [isSticky, setIsSticky] = useState(false);
+  const { accessToken } = useAuthStore();
 
   const handleScroll = () => {
     if (window.scrollY >= 30) {
@@ -26,9 +26,7 @@ const useHeader = () => {
     };
   }, []);
 
-  const hasAccessToken = LocalStorage.getItem(ACCESS_TOKEN);
-
-  return { isSticky, hasAccessToken, openModal, routeMyCollection };
+  return { isSticky, accessToken, openModal, routeMyCollection };
 };
 
 export default useHeader;
