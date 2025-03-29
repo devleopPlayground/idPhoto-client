@@ -4,7 +4,7 @@ import { create } from 'zustand';
 
 type UseAuthStoreType = {
   accessToken: string | null;
-  setAccessToken: (token: string) => void;
+  setAccessToken: (token: string | null) => void;
 };
 
 const useAuthStore = create<UseAuthStoreType>((set) => ({

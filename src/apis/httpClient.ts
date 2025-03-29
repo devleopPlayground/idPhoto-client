@@ -3,6 +3,7 @@ import type { AxiosInstance, AxiosResponse, InternalAxiosRequestConfig } from 'a
 import { reissueAccessToken, verifyRefreshToken } from './token';
 import { LocalStorage } from '@/utils/localStorage';
 import { ACCESS_TOKEN, REFRESH_TOKEN } from '@/constants/token';
+import useAuthStore from '@/stores/useAuthStore';
 
 const api: AxiosInstance = axios.create({
   baseURL: process.env.NEXT_PUBLIC_SERVER_URL,
@@ -29,6 +30,7 @@ axios.interceptors.response.use(
     return response;
   },
   async (error) => {
+    const setAccessToken = useAuthStore((state) => state.setAccessToken);
     const request = error.config;
 
     if (error.response?.status === 401 && !request._retry) {
@@ -39,6 +41,8 @@ axios.interceptors.response.use(
       if (statusCode === 401) {
         LocalStorage.removeItem(ACCESS_TOKEN);
         LocalStorage.removeItem(REFRESH_TOKEN);
+
+        setAccessToken(null);
 
         window.location.href = '/';
       }

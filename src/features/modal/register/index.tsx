@@ -1,8 +1,8 @@
 import Input from '@/components/common/input';
 import st from './registerModal.module.scss';
 import Button from '@/components/common/button';
-import { FcGoogle } from 'react-icons/fc';
 import useRegister from './hooks/useRegister';
+import { GoogleLoginBox } from '@/components/common';
 
 const Register = () => {
   const { onSubmitRegister } = useRegister();
@@ -17,10 +17,7 @@ const Register = () => {
           회원가입
         </Button>
       </form>
-      <div className={st.googleLoginButton}>
-        <FcGoogle style={{ width: '20px', height: '20px' }} />
-        구글 계정으로 로그인
-      </div>
+      <GoogleLoginBox />
     </div>
   );
 };
