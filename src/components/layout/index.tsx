@@ -1,6 +1,5 @@
 import LayoutAnimatePresence from './animatePresence';
 import LayoutContainer from './container';
-import LayoutHeader from './header';
 
 type LayoutContainerProps = {
   children: React.ReactNode;
@@ -9,10 +8,7 @@ type LayoutContainerProps = {
 const LayoutProvider = ({ children }: LayoutContainerProps) => {
   return (
     <LayoutAnimatePresence>
-      <LayoutContainer>
-        <LayoutHeader />
-        <div style={{ paddingTop: '82px' }}>{children}</div>
-      </LayoutContainer>
+      <LayoutContainer>{children}</LayoutContainer>
     </LayoutAnimatePresence>
   );
 };

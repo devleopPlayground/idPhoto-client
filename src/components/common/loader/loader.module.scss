@@ -1,0 +1,36 @@
+.container {
+  border-style: solid;
+  border-color: rgb(188, 188, 188);
+  border-bottom-color: rgb(255, 126, 147);
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.sm {
+  width: 28px;
+  height: 28px;
+  border-width: 3px;
+}
+
+.md {
+  width: 35px;
+  height: 35px;
+  border-width: 3.5px;
+}
+
+.lg {
+  width: 48px;
+  height: 48px;
+  border-width: 4px;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

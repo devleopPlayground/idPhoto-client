@@ -4,7 +4,9 @@ import { ACCESS_TOKEN, REFRESH_TOKEN } from '@/constants/token';
 import useAuthStore from '@/stores/useAuthStore';
 import { LocalStorage } from '@/utils/localStorage';
 import { useSearchParams } from 'next/navigation';
+import st from './googleLogin.module.scss';
 import { useEffect } from 'react';
+import Loader from '@/components/common/loader';
 
 const GoogleLogin = () => {
   const searchParams = useSearchParams();
@@ -22,11 +24,15 @@ const GoogleLogin = () => {
 
       setAccessToken(accessToken);
 
-      window.history.replaceState({}, '', '/');
+      window.location.href = '/';
     }
   }, [searchParams, setAccessToken]);
 
-  return <></>;
+  return (
+    <div className={st.container}>
+      <Loader size="lg" />
+    </div>
+  );
 };
 
 export default GoogleLogin;

@@ -9,6 +9,7 @@ import WebCameraButtons from './components/webCameraButtons';
 import usePhotoShoot from './hooks/usePhotoShoot';
 import st from './photoShoot.module.scss';
 import usePart from './hooks/usePart';
+import Header from '@/components/layout/header';
 
 const PhotoShoot = () => {
   const {
@@ -27,8 +28,9 @@ const PhotoShoot = () => {
 
   return (
     <div>
+      <Header />
       {part !== 'RESULT' ? (
-        <div>
+        <div style={{ paddingTop: '82px' }}>
           {isWebcamOn ? (
             <div className={st.container}>
               <WebCam webcamRef={webcamRef} isCameraLoading={isCameraLoading} onUserMedia={onUserMedia} />

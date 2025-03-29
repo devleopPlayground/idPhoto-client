@@ -5,7 +5,7 @@ import st from './header.module.scss';
 import useHeader from './hooks/useHeader';
 import clsx from 'clsx';
 
-const LayoutHeader = () => {
+const Header = () => {
   const { isSticky, accessToken, openModal, routeMyCollection } = useHeader();
 
   return (
@@ -18,4 +18,4 @@ const LayoutHeader = () => {
   );
 };
 
-export default LayoutHeader;
+export default Header;
